@@ -1,43 +1,39 @@
-<h1 align="center">Santiago Gaitán</h1>
-
-<p align="center">
-  Estudiante de sistemas · Buenos Aires, AR<br/>
-  <sub>Programo, diseño y rompo cosas para entender cómo andan.</sub>
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/santiago-gaitan-b73762423"><img src="https://img.shields.io/badge/LinkedIn-000?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:santiagoandresgaitan@gmail.com"><img src="https://img.shields.io/badge/Email-000?style=flat-square&logo=gmail&logoColor=white" /></a>
-  <img src="https://komarev.com/ghpvc/?username=sannngaitan&style=flat-square&color=000&label=visitas" />
-</p>
-
-<br/>
-
-### ~ sobre mí
-
-- 💻 Estudiando desarrollo de software: POO, estructuras de datos, bases de datos y redes
-- 🎨 Me gusta el diseño web y armar interfaces prolijas
-- 🐧 Metiéndome con Linux y servidores
-- 🎮 Combustible: juegos, café y música
-- ✨ Aura o laura
-
-<br/>
-
-### ~ stack
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
+  <img alt="Santiago Gaitán — estudiante de sistemas, Buenos Aires" src="assets/header-light.svg" width="100%">
+</picture>
 
 <p>
-  <img src="https://skillicons.dev/icons?i=java,cpp,python,js,html,css,mysql,linux,git,figma,vscode&theme=dark" />
+  <a href="https://www.linkedin.com/in/santiago-gaitan-b73762423"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin-santiago--gaitan-0A66C2?style=flat-square&logo=linkedin&logoColor=white&labelColor=0d1117"></a>
+  <a href="mailto:santiagoandresgaitan@gmail.com"><img alt="Email" src="https://img.shields.io/badge/email-santiagoandresgaitan-EA4335?style=flat-square&logo=gmail&logoColor=white&labelColor=0d1117"></a>
 </p>
 
-<br/>
+Estudio desarrollo de software y me gusta el camino completo: modelar el problema, escribir el código y que la interfaz quede prolija. Últimamente ando con **POO en Java y C++**, **bases de datos** y **redes / Linux**.
 
-### ~ actividad
+```txt
+ahora     →  POO, estructuras de datos, UML y modelado de datos
+también   →  diseño web y prototipos en Figma
+de lado   →  servidores Linux, Samba, Packet Tracer
+fuera     →  juegos, café, música · aura o laura
+```
 
-<p>
-  <img height="150" src="https://github-readme-stats.vercel.app/api?username=sannngaitan&show_icons=true&hide_border=true&hide_title=true&theme=transparent&title_color=ffffff&text_color=8b949e&icon_color=ffffff&count_private=true&locale=es" />
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sannngaitan&layout=compact&hide_border=true&hide_title=true&theme=transparent&text_color=8b949e&langs_count=6&locale=es" />
-</p>
+### stack
 
-<br/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=java,cpp,python,js,html,css,mysql,linux,git,figma,vscode&theme=dark&perline=11">
+  <img alt="Java, C++, Python, JavaScript, HTML, CSS, MySQL, Linux, Git, Figma, VS Code" src="https://skillicons.dev/icons?i=java,cpp,python,js,html,css,mysql,linux,git,figma,vscode&theme=light&perline=11">
+</picture>
 
-<p align="center"><sub>— gracias por pasar —</sub></p>
+### actividad
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img alt="Estadísticas de GitHub" src="assets/stats-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sannngaitan/sannngaitan/output/snake-dark.svg">
+  <img alt="Contribuciones" src="https://raw.githubusercontent.com/sannngaitan/sannngaitan/output/snake-light.svg" width="100%">
+</picture>
+
+<sub>stats y viborita se regeneran solas todos los días con GitHub Actions.</sub>
