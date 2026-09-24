@@ -1,70 +1,43 @@
-<!-- Reemplazá TU_USUARIO por tu usuario de GitHub (buscar y reemplazar) -->
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:0d1117,100:003b1f&height=120&section=header&text=~/santiago&fontColor=39ff14&fontSize=48&fontAlign=50&fontAlignY=55&desc=root@buenos-aires:~$%20whoami&descAlign=50&descAlignY=85&descSize=14" width="100%"/>
-
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=39FF14&center=true&vCenter=true&width=600&lines=%3E+Hola%2C+soy+Santiago+Gait%C3%A1n+%F0%9F%91%8B;%3E+Developer+%7C+Buenos+Aires%2C+AR;%3E+Rompiendo+cosas+para+entender+c%C3%B3mo+andan;%3E+sudo+make+it+work+%26%26+make+it+fast" alt="Typing SVG" /></a>
-
-<img src="https://komarev.com/ghpvc/?username=TU_USUARIO&style=flat-square&color=39ff14&label=visitas" />
-
-</div>
-
----
-
-```bash
-santiago@github:~$ cat about_me.json
-```
-
-```json
-{
-  "nombre":      "Santiago Andrés Gaitán",
-  "ubicacion":   "Buenos Aires, Argentina 🇦🇷",
-  "rol":         "Developer",
-  "aprendiendo": ["cosas nuevas todos los días"],
-  "combustible": ["mate", "café", "música fuerte"],
-  "fun_fact":    "si funciona a la primera, desconfío"
-}
-```
-
-```bash
-santiago@github:~$ ls ./stack
-```
+<h1 align="center">Santiago Gaitán</h1>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,bash,git,github,python,js,ts,html,css,react,nodejs,docker,vscode&theme=dark&perline=13" />
-</p>
-
-```bash
-santiago@github:~$ ./stats.sh --verbose
-```
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=TU_USUARIO&show_icons=true&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&include_all_commits=true&count_private=true&locale=es" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=TU_USUARIO&layout=compact&theme=chartreuse-dark&hide_border=true&bg_color=0d1117&langs_count=8&locale=es" />
+  Estudiante de sistemas · Buenos Aires, AR<br/>
+  <sub>Programo, diseño y rompo cosas para entender cómo andan.</sub>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=TU_USUARIO&theme=chartreuse-dark&hide_border=true&background=0d1117&locale=es" />
+  <a href="https://www.linkedin.com/in/santiago-gaitan-b73762423"><img src="https://img.shields.io/badge/LinkedIn-000?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:santiagoandresgaitan@gmail.com"><img src="https://img.shields.io/badge/Email-000?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <img src="https://komarev.com/ghpvc/?username=sannngaitan&style=flat-square&color=000&label=visitas" />
 </p>
 
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=TU_USUARIO&bg_color=0d1117&color=39ff14&line=39ff14&point=ffffff&area=true&area_color=003b1f&hide_border=true&custom_title=commits.log" />
+<br/>
+
+### ~ sobre mí
+
+- 💻 Estudiando desarrollo de software: POO, estructuras de datos, bases de datos y redes
+- 🎨 Me gusta el diseño web y armar interfaces prolijas
+- 🐧 Metiéndome con Linux y servidores
+- 🎮 Combustible: juegos, café y música
+- ✨ Aura o laura
+
+<br/>
+
+### ~ stack
+
+<p>
+  <img src="https://skillicons.dev/icons?i=java,cpp,python,js,html,css,mysql,linux,git,figma,vscode&theme=dark" />
 </p>
 
-```bash
-santiago@github:~$ ping santiago --contact
-```
+<br/>
 
-<p align="center">
-  <a href="mailto:santiagoandresgaitan@gmail.com"><img src="https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=39ff14" /></a>
-  <a href="https://www.linkedin.com/in/TU_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=39ff14" /></a>
-  <a href="https://github.com/TU_USUARIO"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=39ff14" /></a>
+### ~ actividad
+
+<p>
+  <img height="150" src="https://github-readme-stats.vercel.app/api?username=sannngaitan&show_icons=true&hide_border=true&hide_title=true&theme=transparent&title_color=ffffff&text_color=8b949e&icon_color=ffffff&count_private=true&locale=es" />
+  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sannngaitan&layout=compact&hide_border=true&hide_title=true&theme=transparent&text_color=8b949e&langs_count=6&locale=es" />
 </p>
 
-```bash
-santiago@github:~$ exit
-logout — gracias por pasar 🟢
-```
+<br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:003b1f,100:0d1117&height=40&section=footer" width="100%"/>
+<p align="center"><sub>— gracias por pasar —</sub></p>
