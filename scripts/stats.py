@@ -37,6 +37,7 @@ query($login: String!) {
     repositories(ownerAffiliations: OWNER, isFork: false, first: 100, orderBy: {field: UPDATED_AT, direction: DESC}) {
       totalCount
       nodes {
+        name
         stargazerCount
         languages(first: 10, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name color } } }
       }
@@ -59,6 +60,8 @@ def fetch():
     langs = {}
     colors = {}
     for n in repos["nodes"]:
+        if n["name"].lower() == USER.lower():
+            continue
         for e in n["languages"]["edges"]:
             name = e["node"]["name"]
             if name in SKIP_LANGS:
@@ -99,67 +102,66 @@ THEMES = {
 
 
 def render(s, theme):
-    W, H = 840, 172
+    W, H = 600, 272
     total = sum(s["langs"].values()) or 1
     top = sorted(s["langs"].items(), key=lambda kv: -kv[1])[:6]
 
     metrics = [
         ("contribuciones", s["contribs"], "último año"),
-        ("racha actual", s["streak"], f"mejor: {s['best']} días"),
-        ("repos", s["repos"], f"★ {s['stars']}"),
+        ("racha", s["streak"], f"récord {s['best']} días"),
+        ("repos", s["repos"], f"★ {s['stars']} estrellas"),
     ]
-    mx = 40
     m_svg = ""
     for k, (label, val, hint) in enumerate(metrics):
-        x = mx + k * 135
+        x = 32 + k * 190
         m_svg += (
             f'<g class="fade" style="animation-delay:{.1 + k * .12:.2f}s">'
-            f'<text x="{x}" y="74" class="num">{escape(str(val))}</text>'
-            f'<text x="{x}" y="100" class="lbl">{escape(label)}</text>'
-            f'<text x="{x}" y="120" class="hint">{escape(hint)}</text></g>'
+            f'<text x="{x}" y="72" class="num">{escape(str(val))}</text>'
+            f'<text x="{x}" y="98" class="lbl">{escape(label)}</text>'
+            f'<text x="{x}" y="118" class="hint">{escape(hint)}</text></g>'
         )
 
-    bx, bw, by = 470, 330, 52
+    bx, bw, by = 32, W - 64, 176
     bar, legend, cx = "", "", bx
     for k, (name, size) in enumerate(top):
         w = max(size / total * bw, 3)
         col = s["colors"].get(name, "#8b949e")
-        bar += f'<rect x="{cx:.1f}" y="{by}" width="{w:.1f}" height="8" fill="{col}"/>'
+        bar += f'<rect x="{cx:.1f}" y="{by}" width="{w:.1f}" height="10" fill="{col}"/>'
         cx += w
-        lx = bx + (k % 2) * 170
-        ly = by + 34 + (k // 2) * 24
+        lx = bx + (k % 3) * 190
+        ly = by + 42 + (k // 3) * 28
         pct = size / total * 100
         legend += (
             f'<g class="fade" style="animation-delay:{.3 + k * .07:.2f}s">'
-            f'<circle cx="{lx + 5}" cy="{ly - 4}" r="4.5" fill="{col}"/>'
-            f'<text x="{lx + 16}" y="{ly}" class="lang">{escape(name)}'
-            f'<tspan class="hint" dx="6">{pct:.1f}%</tspan></text></g>'
+            f'<circle cx="{lx + 5}" cy="{ly - 5}" r="5" fill="{col}"/>'
+            f'<text x="{lx + 18}" y="{ly}" class="lang">{escape(name)}'
+            f'<tspan class="hint" dx="7">{pct:.0f}%</tspan></text></g>'
         )
     if not top:
-        legend = f'<text x="{bx}" y="{by + 34}" class="hint">todavía sin código público</text>'
+        legend = f'<text x="{bx}" y="{by + 42}" class="hint">todavía sin código público</text>'
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <style>
   {THEMES[theme].replace("{{", "{").replace("}}", "}")}
   text {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }}
-  .num {{ fill: var(--fg); font-size: 34px; font-weight: 700; letter-spacing: -1px; }}
-  .lbl {{ fill: var(--fg); font-size: 14px; }}
-  .hint {{ fill: var(--mute); font-size: 12px; }}
-  .lang {{ fill: var(--fg); font-size: 13px; }}
-  .fade {{ opacity: 0; animation: in .6s ease-out forwards; }}
-  @keyframes in {{ to {{ opacity: 1; }} }}
-  .grow {{ transform-origin: {bx}px 0; transform: scaleX(0); animation: grow 1s cubic-bezier(.2,.7,.2,1) .2s forwards; }}
-  @keyframes grow {{ to {{ transform: scaleX(1); }} }}
+  .num {{ fill: var(--fg); font-size: 40px; font-weight: 700; letter-spacing: -1px; }}
+  .lbl {{ fill: var(--fg); font-size: 17px; }}
+  .hint {{ fill: var(--mute); font-size: 14px; }}
+  .lang {{ fill: var(--fg); font-size: 16px; }}
+  .fade {{ animation: in .6s ease-out both; }}
+  @keyframes in {{ from {{ opacity: 0; }} }}
+  .grow {{ transform-origin: {bx}px 0; animation: grow 1s cubic-bezier(.2,.7,.2,1) .2s both; }}
+  @keyframes grow {{ from {{ transform: scaleX(0); }} }}
 </style>
 <rect x="0.5" y="0.5" width="{W - 1}" height="{H - 1}" rx="14" fill="var(--bg)" stroke="var(--line)"/>
 {m_svg}
-<line x1="440" y1="36" x2="440" y2="140" stroke="var(--line)"/>
-<text x="{bx}" y="38" class="hint">lenguajes</text>
-<clipPath id="r"><rect x="{bx}" y="{by}" width="{bw}" height="8" rx="4"/></clipPath>
-<rect x="{bx}" y="{by}" width="{bw}" height="8" rx="4" fill="var(--track)"/>
+<line x1="32" y1="142" x2="{W - 32}" y2="142" stroke="var(--line)"/>
+<text x="{bx}" y="{by - 12}" class="hint">lenguajes más usados</text>
+<text x="{W - 32}" y="{by - 12}" class="hint" text-anchor="end">act. {date.today().strftime("%d/%m/%Y")}</text>
+<clipPath id="r"><rect x="{bx}" y="{by}" width="{bw}" height="10" rx="5"/></clipPath>
+<rect x="{bx}" y="{by}" width="{bw}" height="10" rx="5" fill="var(--track)"/>
 <g clip-path="url(#r)"><g class="grow">{bar}</g></g>
 {legend}
-<text x="40" y="150" class="hint">actualizado {date.today().strftime("%d/%m/%Y")}</text>
 </svg>
 '''
 

@@ -1,44 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="840" height="220" viewBox="0 0 840 220">
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="190" viewBox="0 0 600 190">
   <style>
     :root { --bg:#ffffff; --fg:#1f2328; --mute:#656d76; --line:#d0d7de; --acc:#1f883d; }
     .mono { white-space: pre; font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; }
     .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
-    .bg { fill: var(--bg); }
-    .frame { fill: none; stroke: var(--line); }
-    .prompt { fill: var(--mute); font-size: 15px; }
+    .prompt { fill: var(--mute); font-size: 16px; }
     .acc { fill: var(--acc); }
-    .name { fill: var(--fg); font-size: 54px; font-weight: 700; letter-spacing: -1.5px; }
+    .name { fill: var(--fg); font-size: 52px; font-weight: 700; letter-spacing: -1.5px; }
     .sub { fill: var(--mute); font-size: 17px; }
     .dot { fill: var(--line); }
-
-    .reveal { opacity: 0; animation: in .7s cubic-bezier(.2,.7,.2,1) forwards; }
-    .d1 { animation-delay: .15s; } .d2 { animation-delay: .45s; } .d3 { animation-delay: .8s; }
-    @keyframes in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-
-    .type { clip-path: inset(0 100% 0 0); animation: type 1.1s steps(26) .3s forwards; }
-    @keyframes type { to { clip-path: inset(0 0 0 0); } }
-
+    .reveal { animation: in .7s cubic-bezier(.2,.7,.2,1) both; }
+    .d1 { animation-delay: .5s; } .d2 { animation-delay: .8s; }
+    @keyframes in { from { opacity: 0; transform: translateY(8px); } }
+    .type { animation: type .9s steps(6) .1s both; }
+    @keyframes type { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
     .cursor { animation: blink 1.05s steps(1) infinite; }
     @keyframes blink { 50% { opacity: 0; } }
   </style>
-
-  <rect class="bg" x="0" y="0" width="840" height="220" rx="14"/>
-  <rect class="frame" x="0.5" y="0.5" width="839" height="219" rx="14"/>
-
-  <circle class="dot" cx="28" cy="26" r="5"/>
-  <circle class="dot" cx="46" cy="26" r="5"/>
-  <circle class="dot" cx="64" cy="26" r="5"/>
-
-  <g class="mono">
-    <text x="40" y="78" class="prompt"><tspan class="acc">➜</tspan>  ~</text>
-    <text x="94" y="78" class="prompt type">whoami</text>
-  </g>
-
-  <g class="reveal d1">
-    <text x="38" y="140" class="sans name">Santiago Gaitán<tspan class="acc cursor" dx="4">_</tspan></text>
-  </g>
-
-  <g class="reveal d2 mono">
-    <text x="40" y="180" class="sub">estudiante de sistemas  ·  buenos aires, ar</text>
-  </g>
+  <rect x="0.5" y="0.5" width="599" height="189" rx="14" fill="var(--bg)" stroke="var(--line)"/>
+  <circle class="dot" cx="26" cy="24" r="5"/><circle class="dot" cx="44" cy="24" r="5"/><circle class="dot" cx="62" cy="24" r="5"/>
+  <text x="32" y="70" class="mono prompt"><tspan class="acc">➜</tspan>  ~</text>
+  <text x="84" y="70" class="mono prompt type">whoami</text>
+  <text x="30" y="128" class="sans name reveal d1">Santiago Gaitán<tspan class="acc cursor" dx="3">_</tspan></text>
+  <text x="32" y="162" class="mono sub reveal d2">estudiante de sistemas · bs as, ar</text>
 </svg>
