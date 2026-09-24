@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Santiago Gaitán — estudiante de sistemas, Buenos Aires" src="assets/header-light.svg" width="100%">
+  <img alt="Santiago Gaitán — estudiante de informatica, Mar del Plata" src="assets/header-light.svg" width="100%">
 </picture>
 
 <p>
@@ -13,7 +13,7 @@ Estudio desarrollo de software y me gusta el camino completo: modelar el problem
 - 🧠 **Ahora:** POO en Java y C++, estructuras de datos, UML
 - 🎨 **También:** diseño web y prototipos en Figma
 - 🐧 **De costado:** Linux, servidores y redes
-- 🎮 **Fuera del código:** juegos, café y música · aura o laura
+- 🎮 **Fuera del código:** juegos, café y música
 
 ### Stack
 
