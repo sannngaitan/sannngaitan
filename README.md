@@ -22,8 +22,8 @@ santiago@github:~$ cat about_me.json
   "ubicacion":   "Buenos Aires, Argentina 🇦🇷",
   "rol":         "Developer",
   "aprendiendo": ["cosas nuevas todos los días"],
-  "combustible": ["juegos", "café", "música"],
-  "fun_fact":    "aura o laura"
+  "combustible": ["mate", "café", "música fuerte"],
+  "fun_fact":    "si funciona a la primera, desconfío"
 }
 ```
 
@@ -58,8 +58,8 @@ santiago@github:~$ ping santiago --contact
 
 <p align="center">
   <a href="mailto:santiagoandresgaitan@gmail.com"><img src="https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=39ff14" /></a>
-  <a href="https://www.linkedin.com/in/santiago-gaitan-b73762423"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=39ff14" /></a>
-  <a href="https://github.com/sannngaitan"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=39ff14" /></a>
+  <a href="https://www.linkedin.com/in/TU_LINKEDIN"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=39ff14" /></a>
+  <a href="https://github.com/TU_USUARIO"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=39ff14" /></a>
 </p>
 
 ```bash
